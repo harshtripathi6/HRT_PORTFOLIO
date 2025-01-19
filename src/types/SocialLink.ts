@@ -10,6 +10,7 @@ export const socialLinkTypes = {
   stackOverflow: 'StackOverflow',
   twitter: 'Twitter',
   youTube: 'YouTube',
+  leetcode: 'Leetcode',
 };
 
 type socialLinkTypesKeys = keyof typeof socialLinkTypes;

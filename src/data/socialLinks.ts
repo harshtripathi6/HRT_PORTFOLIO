@@ -22,6 +22,12 @@ export const socialLinks: SocialLink[] = [
     caption: 'Siddharth Mehta on Twitter',
   },
   {
+    type: socialLinkTypes.leetcode,
+    url: 'https://leetcode.com/u/siddharthm10/',
+    secondary: false,
+    caption: 'Siddharth Mehta on Leetcode',
+  },
+  {
     type: socialLinkTypes.instagram,
     url: 'https://www.instagram.com/siddharth_m10/',
     secondary: true,

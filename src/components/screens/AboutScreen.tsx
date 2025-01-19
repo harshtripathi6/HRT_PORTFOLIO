@@ -1,17 +1,18 @@
 import React from 'react';
 
 import PageLayout from '../layouts/PageLayout';
-import type { Profile as ProfileType } from '../../types/Profile';
+import type { Profile as ProfileType, TimelineEntry as TimelineEntryType } from '../../types/Profile';
 import Profile from '../elements/Profile';
 import SEO from '../shared/SEO';
 import ErrorBoundary from '../shared/ErrorBoundary';
 
 type AboutScreenProps = {
   profile: ProfileType,
+  timelineEntries: TimelineEntryType[];
 };
 
 const AboutScreen = (props: AboutScreenProps): React.ReactElement => {
-  const { profile } = props;
+  const { profile, timelineEntries } = props;
 
   const summary: string = profile.summary && profile.summary.length ? profile.summary[0] : '';
 
@@ -22,7 +23,7 @@ const AboutScreen = (props: AboutScreenProps): React.ReactElement => {
         description={`${profile.firstName} ${profile.lastName}. ${profile.position}. ${summary}`}
       />
       <ErrorBoundary>
-        <Profile profile={profile} />
+        <Profile profile={profile} timelineEntries={timelineEntries} />
       </ErrorBoundary>
     </PageLayout>
   );

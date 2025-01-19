@@ -1,7 +1,6 @@
 import React from 'react';
 import { FiBriefcase } from '@react-icons/all-files/fi/FiBriefcase';
-
-import type { Profile as ProfileType } from '../../types/Profile';
+import type { Profile as ProfileType, TimelineEntry as TimelineEntryType } from '../../types/Profile';
 import Avatar from '../shared/Avatar';
 import Location from '../shared/Location';
 import H, { hLevel } from '../shared/H';
@@ -9,14 +8,14 @@ import Tags from '../shared/Tags';
 import SocialLinks from '../shared/SocialLinks';
 import Greeting from '../shared/Greeting';
 import Timeline from '../shared/Timeline';
-import { timelineEntries } from '../../data/profile';
 
 type ProfileProps = {
   profile: ProfileType;
+  timelineEntries: TimelineEntryType[];
 };
 
 const Profile = (props: ProfileProps): React.ReactElement => {
-  const { profile } = props;
+  const { profile, timelineEntries } = props;
 
   const avatarElement = profile.avatar ? (
     <div className="mr-0 mb-6 sm:mr-6 sm:mb-0">

@@ -80,7 +80,7 @@ const ContactScreen = (): React.ReactElement => {
             {/* Book a Call */}
             <div className="text-center mb-4">
               <a
-                href="https://calendly.com/siddharthm10"
+                href="https://app.simplymeet.me/siddharthm10/siddharthm10-20-1737313940965?day=2025-01-19"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-md hover:bg-black transition"
@@ -106,7 +106,7 @@ const ContactScreen = (): React.ReactElement => {
               If the resume is not visible, kindly{' '}
               use the download button below to view it.
             </div>
-            <div className="text-center mt-4">
+            <div className="text-center my-4">
               <a
                 href="/static-assets/resume_ml.pdf"
                 download

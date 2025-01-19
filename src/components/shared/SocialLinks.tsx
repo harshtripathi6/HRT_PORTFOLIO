@@ -8,6 +8,7 @@ import { FaMedium } from '@react-icons/all-files/fa/FaMedium';
 import { FaFacebookSquare } from '@react-icons/all-files/fa/FaFacebookSquare';
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube';
 import { FaDev } from '@react-icons/all-files/fa/FaDev';
+import { SiLeetcode } from '@react-icons/all-files/si/SiLeetcode';
 
 import { socialLinkTypes } from '../../types/SocialLink';
 import type { SocialLink as SocialLinkType } from '../../types/SocialLink';
@@ -31,6 +32,7 @@ const linkToIcon = {
   [socialLinkTypes.facebook]: FaFacebookSquare,
   [socialLinkTypes.devTo]: FaDev,
   [socialLinkTypes.youTube]: FaYoutube,
+  [socialLinkTypes.leetcode]: SiLeetcode,
 };
 
 const SocialLinks = (props: SocialLinksProps): React.ReactElement | null => {
