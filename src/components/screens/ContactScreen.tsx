@@ -10,12 +10,12 @@ import SEO from '../shared/SEO';
 import PageLayout from '../layouts/PageLayout';
 import { socialLinks } from '../../data/socialLinks';
 
-const AboutScreen = (): React.ReactElement => {
+const ContactScreen = (): React.ReactElement => {
   const renderContactLink = (
     icon: React.ReactNode,
     label: string,
     link?: string,
-  ):React.ReactElement => {
+  ): React.ReactElement => {
     return link ? (
       <a
         href={link}
@@ -83,7 +83,7 @@ const AboutScreen = (): React.ReactElement => {
                 href="https://calendly.com/siddharthm10"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600 transition"
+                className="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-md hover:bg-black transition"
               >
                 Book time on Calendar
               </a>
@@ -97,10 +97,23 @@ const AboutScreen = (): React.ReactElement => {
             </h2>
             <div className="w-full h-[500px] sm:h-[700px]">
               <iframe
-                src="/static-assets/resume_ml.pdf"
+                src="/static-assets/Resume - Siddharth Mehta.pdf"
                 title="Resume"
                 className="w-full h-full border-none"
               />
+            </div>
+            <div className="mt-4 text-center text-sm text-gray-500">
+              If the resume is not visible, kindly{' '}
+              use the download button below to view it.
+            </div>
+            <div className="text-center mt-4">
+              <a
+                href="/static-assets/resume_ml.pdf"
+                download
+                className="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-md hover:bg-black transition"
+              >
+                Download Resume
+              </a>
             </div>
           </div>
         </div>
@@ -109,4 +122,4 @@ const AboutScreen = (): React.ReactElement => {
   );
 };
 
-export default AboutScreen;
+export default ContactScreen;

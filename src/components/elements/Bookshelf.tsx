@@ -5,7 +5,7 @@ const Bookshelf = (): React.ReactElement => {
   return (
     <div className="flex flex-col items-start px-4">
       {/* Bookshelf Layout */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-5xl">
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-5xl">
         {booksData.map((book) => (
           <a
             key={book.title}

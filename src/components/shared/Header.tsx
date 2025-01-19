@@ -14,9 +14,7 @@ const Header = (props: HeaderProps): React.ReactElement => {
       <div className="mr-6">
         <Logo />
       </div>
-      <nav>
-        <NavMenu />
-      </nav>
+      <NavMenu />
     </header>
   );
 };

@@ -30,7 +30,7 @@ const Greeting = (): React.ReactElement => {
 
   return (
     <div>
-      <p className="font-light">
+      <p className="font-light text-justify">
         Hi there! I&apos;m <strong>Siddharth Mehta</strong>, a passionate{' '}
         <strong>Master&apos;s in Computer Science</strong> student at the{' '}
         <strong>University at Buffalo</strong>. With experience spanning{' '}

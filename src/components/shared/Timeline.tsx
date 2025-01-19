@@ -11,28 +11,28 @@ const Timeline: React.FC<TimelineProps> = ({ entries }) => {
   return (
     <div className="relative w-full max-w-4xl mx-auto my-12">
       {/* Vertical Line */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-300" />
+      <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-300 md:block hidden" />
 
       {/* Present Label */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 text-gray-500 font-medium">
+      <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 text-gray-500 font-medium md:block hidden">
         Present
       </div>
 
       {/* Timeline Entries */}
       {entries.map((entry, index) => {
-        const isRightSide = index % 2 === 0; // Alternate sides
+        const isRightSide = index % 2 === 0; // Alternate sides for larger screens
 
         return (
           <div
             key={entry.description}
             className={`flex items-center w-full mb-8 ${
-              isRightSide ? 'justify-start' : 'justify-end'
-            }`}
+              isRightSide ? 'md:justify-start' : 'md:justify-end'
+            } justify-start text-justify`} // On small screens, all entries are aligned to the left
           >
             {/* Content Block */}
             <div
-              className={`relative w-5/12 p-4 bg-white shadow-md rounded-lg ${
-                isRightSide ? 'mr-8' : 'ml-8'
+              className={`relative w-full md:w-5/12 p-4 bg-white shadow-md rounded-lg ${
+                isRightSide ? 'md:mr-8' : 'md:ml-8'
               }`}
             >
               {/* Image or Icon */}
@@ -67,13 +67,13 @@ const Timeline: React.FC<TimelineProps> = ({ entries }) => {
             </div>
 
             {/* Circle */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full md:block hidden" />
           </div>
         );
       })}
 
       {/* 2018 Label */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-2rem] text-gray-500 font-medium">
+      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-2rem] text-gray-500 font-medium md:block hidden">
         2018
       </div>
     </div>
