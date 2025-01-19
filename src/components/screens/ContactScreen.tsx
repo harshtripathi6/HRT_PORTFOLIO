@@ -33,6 +33,8 @@ const ContactScreen = (): React.ReactElement => {
       </div>
     );
   };
+  
+  const socialLinksFiltered = socialLinks.filter((link) => link.type!=='Leetcode')
 
   return (
     <PageLayout>
@@ -53,7 +55,7 @@ const ContactScreen = (): React.ReactElement => {
 
             {/* Contact Links */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
-              {socialLinks.map((link) => {
+              {socialLinksFiltered.map((link) => {
                 const iconMap: { [key: string]: React.ReactNode } = {
                   LinkedIn: <FaLinkedin className="text-2xl" />,
                   GitHub: <FaGithub className="text-2xl" />,
