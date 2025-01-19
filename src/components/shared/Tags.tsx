@@ -37,6 +37,7 @@ const Tags = (props: TagsProps): React.ReactElement | null => {
         toHide={toHide}
         onRender={onRender}
         itemClassName="mr-2 mb-2"
+        className="flex flex-wrap lg:justify-start justify-center"
       />
     </div>
   );
