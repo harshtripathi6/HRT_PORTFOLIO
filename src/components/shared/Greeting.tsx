@@ -37,7 +37,7 @@ const Greeting = (): React.ReactElement => {
         <strong>data science</strong>, <strong>software development</strong>, and{' '}
         <strong>freelancing</strong>, I&apos;ve worked on impactful projects ranging{' '}
         from <em>machine learning solutions</em> to{' '}
-        <em>scalable web applications</em>.Explore my {projectsLinkElement}{' '}
+        <em>scalable web applications</em>. Explore my {projectsLinkElement}{' '}
         or check out my {blogLinkElement}{' '}
         to learn more about my work and thoughts. I&apos;m always eager to tackle challenging
         problems, learn new skills, and deliver innovative, high-quality
