@@ -140,6 +140,13 @@ const gatsbyConfig: GatsbyConfig = {
         trackingIds: [
           GOOGLE_ANALYTICS_ID,
         ],
+        gtagConfig: {
+          anonymize_ip: true, // Anonymize IP addresses for GDPR compliance
+          cookie_expires: 3600, // Set cookie expiration to 1 hour
+        },
+        pluginConfig: {
+          head: true, // Place gtag.js script in the <head> instead of the <body>
+        },
       },
     },
 
