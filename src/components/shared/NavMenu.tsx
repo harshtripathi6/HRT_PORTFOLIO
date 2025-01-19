@@ -49,7 +49,7 @@ const NavMenu = (): React.ReactElement => {
           aria-label="Close menu overlay"
           className="fixed inset-0 bg-black bg-opacity-30 z-40"
           onClick={toggleMenu}
-          onKeyDown={(e) => {
+          onKeyDown={(e):void => {
             if (e.key === 'Enter' || e.key === ' ') toggleMenu();
           }}
         />

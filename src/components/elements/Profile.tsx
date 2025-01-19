@@ -63,7 +63,7 @@ const Profile = (props: ProfileProps): React.ReactElement => {
 
   const tagsElement = profile?.tags ? (
     <div className="mb-4">
-      <Tags tags={profile.tags} />
+      <Tags tags={profile.tags} className="flex flex-wrap lg:justify-start justify-center" />
     </div>
   ) : null;
 

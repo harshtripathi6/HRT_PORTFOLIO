@@ -57,7 +57,7 @@ const BlogScreen = (props: BlogScreenProps): React.ReactElement => {
         <Button
           className={`text-sm ${!selectedTag ? 'font-bold' : 'font-normal'}`}
           kind={!selectedTag ? 'primary' : 'secondary'}
-          onClick={() => setSelectedTag(null)}
+          onClick={():void => setSelectedTag(null)}
         >
           All
         </Button>
@@ -68,7 +68,7 @@ const BlogScreen = (props: BlogScreenProps): React.ReactElement => {
               selectedTag === tag ? 'font-bold' : 'font-normal'
             }`}
             kind={selectedTag === tag ? 'primary' : 'secondary'}
-            onClick={() => setSelectedTag(tag)}
+            onClick={():void => setSelectedTag(tag)}
           >
             {tag}
           </Button>
