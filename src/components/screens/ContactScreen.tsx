@@ -33,8 +33,8 @@ const ContactScreen = (): React.ReactElement => {
       </div>
     );
   };
-  
-  const socialLinksFiltered = socialLinks.filter((link) => link.type!=='Leetcode')
+
+  const socialLinksFiltered = socialLinks.filter((link) => link.type !== 'Leetcode');
 
   return (
     <PageLayout>
