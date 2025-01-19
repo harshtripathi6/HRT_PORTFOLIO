@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import { FiMenu } from '@react-icons/all-files/fi/FiMenu';
+import { FiX } from '@react-icons/all-files/fi/FiX';
 import { Route, routes } from '../../constants/routes';
 import { Link } from '../../types/Link';
 import HyperLink from './HyperLink';
-import { FiMenu } from '@react-icons/all-files/fi/FiMenu';
-import { FiX } from '@react-icons/all-files/fi/FiX';
 
 const NavMenu = (): React.ReactElement => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsOpen(!isOpen);
   };
 
@@ -34,6 +34,7 @@ const NavMenu = (): React.ReactElement => {
       <div className="md:hidden flex items-center justify-end">
         <button
           onClick={toggleMenu}
+          type="button"
           className="text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300"
         >
           {isOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-2xl" />}
@@ -43,8 +44,14 @@ const NavMenu = (): React.ReactElement => {
       {/* Overlay */}
       {isOpen && (
         <div
+          role="button"
+          tabIndex={0}
+          aria-label="Close menu overlay"
           className="fixed inset-0 bg-black bg-opacity-30 z-40"
           onClick={toggleMenu}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') toggleMenu();
+          }}
         />
       )}
 
