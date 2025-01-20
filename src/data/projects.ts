@@ -1,25 +1,25 @@
 import { Projects } from '../types/Project';
 
 export const projects: Projects = {
-  'micrograd-ts': {
-    id: 'micrograd-ts',
-    name: '🤖 Micrograd TS',
-    srcURL: { url: 'https://github.com/trekhleb/micrograd-ts' },
-    demoURL: { url: 'https://trekhleb.dev/micrograd-ts' },
+  'micrograd-cpp': {
+    id: 'micrograd-cpp',
+    name: '🤖 Micrograd Cpp',
+    srcURL: { url: 'https://github.com/siddharthm10/micrograd-cpp' },
+    demoURL: undefined,
     cover: { srcPath: 'projects/micrograd-ts/04-cover.png' },
-    startDate: '2023-08-06',
+    startDate: '2025-01-20',
     summary: [
-      'A tiny scalar-valued autograd engine and a neural net on top of it. A TypeScript version of the karpathy/micrograd repo.',
+      'A tiny scalar-valued autograd engine and a neural net on top of it. A C++ version of the karpathy/micrograd repo.',
     ],
     tags: [
       { name: 'AI' },
       { name: 'ML' },
       { name: 'Machine Learning' },
-      { name: 'TypeScript' },
+      { name: 'C++' },
     ],
     gitHubRepo: {
-      owner: 'trekhleb',
-      repo: 'micrograd-ts',
+      owner: 'siddharthm10',
+      repo: 'micrograd-cpp',
     },
     achievements: [],
   },
