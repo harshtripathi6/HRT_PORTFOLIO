@@ -8,6 +8,8 @@ import Tags from '../shared/Tags';
 import SocialLinks from '../shared/SocialLinks';
 import Greeting from '../shared/Greeting';
 import Timeline from '../shared/Timeline';
+import ProjectHighlights from './ProjectHighlights';
+import { projects } from '../../data/projects';
 
 type ProfileProps = {
   profile: ProfileType;
@@ -68,6 +70,16 @@ const Profile = (props: ProfileProps): React.ReactElement => {
   ) : null;
 
   const socialLinksElement = <SocialLinks links={profile?.socialLinks} />;
+  const timeline = timelineEntries ? (
+    <div className="mt-12 mb-6">
+      <H level={hLevel.h2} className="font-bold text-2xl mb-8">
+        Experience
+      </H>
+      <Timeline entries={timelineEntries} />
+    </div>
+  ) : null;
+
+  const projectHighlights = <ProjectHighlights projects={projects} />;
 
   return (
     <div>
@@ -85,12 +97,8 @@ const Profile = (props: ProfileProps): React.ReactElement => {
       <div>
         <Greeting />
       </div>
-      <div className="mt-12 mb-6">
-        <H level={hLevel.h2} className="font-bold text-2xl mb-8">
-          Experience
-        </H>
-        <Timeline entries={timelineEntries} />
-      </div>
+      {projectHighlights}
+      {timeline}
     </div>
   );
 };

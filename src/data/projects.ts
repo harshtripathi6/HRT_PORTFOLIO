@@ -22,5 +22,6 @@ export const projects: Projects = {
       repo: 'micrograd-cpp',
     },
     achievements: [],
+    highlight: true,
   },
 };

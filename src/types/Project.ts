@@ -23,6 +23,7 @@ export type Project = {
   gitHubRepo?: GitHubRepo,
   links?: Link[],
   achievements?: Achievement[],
+  highlight?: boolean,
 };
 
 export type Projects = Record<ProjectID, Project>;
