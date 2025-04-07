@@ -62,11 +62,11 @@ Below is a simplified **diagram** of our architecture (placeholder, with alt tex
 
 ---
 
-## **Key Problems and How We Solved Them**
+## **Key Challenges and How We Solved Them**
 
 ### **1. Multiple Profiles with a Legacy MID**
 
-**The Problem**  
+**The Challenge**  
 The client required a single account to manage several profiles—one personal and one or more business profiles. Meanwhile, each user came preassigned with a **Member ID (MID)** from a legacy system. 
 
 **Our Solution**  
@@ -85,7 +85,7 @@ The client required a single account to manage several profiles—one personal a
 
 ### **2. MID Verification Overhead**
 
-**The Problem**  
+**The Challenge**  
 Legacy code used for verifying MIDs wasn’t designed to handle high traffic. Continual verification on every login could overwhelm that server.
 
 **Our Solution**  
@@ -102,7 +102,7 @@ Legacy code used for verifying MIDs wasn’t designed to handle high traffic. Co
 
 ### **3. Multi-Factor Search Optimization**
 
-**The Problem**  
+**The Challenge**  
 Users needed robust **location-based** (distance) search combined with tags, names, and other attributes. These calculations had to remain performant, even at scale.
 
 **Our Solution**  
@@ -120,7 +120,7 @@ Users needed robust **location-based** (distance) search combined with tags, nam
 
 ### **4. Admin Control & Platform Monitoring**
 
-**The Problem**  
+**The Challenge**  
 The client needed real-time control over user activities and a comprehensive way to track platform performance.
 
 **Our Solution**  
@@ -139,7 +139,7 @@ The client needed real-time control over user activities and a comprehensive way
 
 ### **5. Load Testing & Predicting User Engagement**
 
-**The Problem**  
+**The Challenge**  
 As a brand-new platform for a private group, user engagement patterns were unpredictable. We needed to test for **10k+ potential users**.
 
 **Our Solution**  
@@ -157,7 +157,7 @@ As a brand-new platform for a private group, user engagement patterns were unpre
 
 ### **6. Push Notifications**
 
-**The Problem**  
+**The Challenge**  
 We wanted a **unified** push notification solution that worked well across Android and iOS, without platform-specific limits.
 
 **Our Solution**  
