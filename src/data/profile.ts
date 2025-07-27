@@ -4,8 +4,10 @@ import { socialLinks } from './socialLinks';
 export const profile: Profile = {
   firstName: 'Siddharth',
   lastName: 'Mehta',
-  position: "M.S. Computer Science Fall'26 Student @ UB",
-  summary: ['Software Developer | Artificial Intelligence Enthusiast'],
+  position: 'Data Science Intern @ Walmart | Research Assistant @ UB',
+  summary: [
+    "M.S. Computer Science @ UB | Ex-ZS | NITH '22 | Agentic AI Enthusiast | Building Intelligent, Scalable AI Systems",
+  ],
   avatar: {
     srcPath: 'profile/avataar_fullxfull.jpeg',
     caption: 'Siddharth Mehta',
@@ -26,24 +28,24 @@ export const profile: Profile = {
 
 export const timelineEntries: TimelineEntry[] = [
   {
-    companyName: 'State University of New York, Buffalo',
-    title: 'M.S. in Computer Science',
-    duration: 'Aug 2024 - Jan 2026',
+    companyName: 'Walmart Global Tech',
+    title: 'Data Science Intern',
+    duration: 'Jun 2025 - Aug 2025',
     description:
-      'Pursuing advanced coursework in machine learning, deep learning, and data-intensive computing.',
-    link: 'https://www.buffalo.edu',
+      'Built an LLM‑powered feedback‑mining platform processing 5k+ artifacts/month that doubled query‑to‑FAQ match accuracy and reduced manual review by 90%.',
+    link: 'https://www.walmart.com',
     linkTxt: 'Visit',
     image:
-      'https://www.buffalo.edu/content/www/brand/TrademarksLicensing/creating-promotional-products/design-ordering/jcr:content/par/image_836581544.img.150.auto.jpg/1626190851210.jpg',
+      'https://media.licdn.com/dms/image/v2/D560BAQHZkPdlecGssw/company-logo_400_400/company-logo_400_400/0/1736779000209/walmart_logo?e=1755129600&v=beta&t=x5F1LuCBtyOGnSvRuUlUFn6vu94RGMejFY9pZBmCxaE',
   },
   {
     companyName: 'ZS Associates',
     title: 'Data Science Associate',
     duration: 'Jun 2022 - Jul 2024',
     description:
-      'Developed ML models for customer prioritization, built scalable data pipelines, and automated workflows to improve efficiency.',
-    // link: "https://www.zs.com",
-    // linkTxt:"visit",
+      'Worked with engineering team for Next‑Best‑Engagement platform integrating 15+ data sources and processing 1M+ weekly records, cutting data defects 30% and delivering XGBoost‑based HCP prioritization (R²=0.70) that helped secure a $100K account expansion.',
+    link: 'https://www.zs.com',
+    linkTxt: 'visit',
     image:
       'https://qtxasset.com/quartz/qcloud5/media/image/ZS%20Logo_0.png?VersionId=63iF4R15IaPBB2mPwGvGrsV8Vdpi1vg4',
   },
@@ -55,7 +57,7 @@ export const timelineEntries: TimelineEntry[] = [
       'Implemented face recognition algorithms and integrated real-time systems on Raspberry Pi and Jetson Nano.',
     link: undefined,
     image:
-      'https://media.licdn.com/dms/image/v2/C560BAQFxFmtoq8j4wg/company-logo_200_200/company-logo_200_200/0/1630658258867/lakebrains_technologies_logo?e=1745452800&v=beta&t=nxM5Zl4flgXZtTsrtVFAQf_bCJpAaZTwRoB0_fI3mSY',
+      'https://media.licdn.com/dms/image/v2/C560BAQFxFmtoq8j4wg/company-logo_200_200/company-logo_200_200/0/1630658258867/lakebrains_technologies_logo?e=2147483647&v=beta&t=HlEFi2l7gad2Y6guJj_xMqHdh8QlbmVL95Qv7Y0zzZw',
   },
   {
     companyName: 'Verzeo',
