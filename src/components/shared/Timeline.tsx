@@ -38,13 +38,15 @@ const Timeline: React.FC<TimelineProps> = ({ entries }) => {
               {/* Image or Icon */}
               <div className="flex items-center mb-3">
                 {entry.image ? (
-                  <img
-                    src={entry.image}
-                    alt={entry.companyName}
-                    className="w-12 h-12 rounded-full object-cover mr-3"
-                  />
+                  <span className="w-14 h-14 mr-3 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={entry.image}
+                      alt={entry.companyName}
+                      className="w-12 h-12 object-contain"
+                    />
+                  </span>
                 ) : (
-                  <FiBriefcase className="w-12 h-12 text-gray-500 mr-3" />
+                  <FiBriefcase className="w-14 h-14 text-gray-500 mr-3" />
                 )}
                 <div>
                   <h3 className="font-semibold text-lg">{entry.companyName}</h3>

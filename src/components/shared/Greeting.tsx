@@ -31,17 +31,15 @@ const Greeting = (): React.ReactElement => {
   return (
     <div>
       <p className="font-light text-justify">
-        Hi there! I&apos;m <strong>Siddharth Mehta</strong>, a passionate{' '}
-        <strong>Master&apos;s in Computer Science</strong> student at the{' '}
-        <strong>University at Buffalo</strong>. With experience spanning{' '}
-        <strong>data science</strong>, <strong>software development</strong>, and{' '}
-        <strong>freelancing</strong>, I&apos;ve worked on impactful projects ranging{' '}
-        from <em>machine learning solutions</em> to{' '}
-        <em>scalable web applications</em>. Explore my {projectsLinkElement}{' '}
-        or check out my {blogLinkElement}{' '}
-        to learn more about my work and thoughts. I&apos;m always eager to tackle challenging
-        problems, learn new skills, and deliver innovative, high-quality
-        solutions.{' '}
+        Hi, I&apos;m <strong>Siddharth Mehta</strong> &mdash; a{' '}
+        <strong>Machine Learning Engineer</strong> and{' '}
+        <strong>Master&apos;s student at the University at Buffalo</strong>. I work
+        across applied ML, large-scale data science, and full-stack engineering,
+        building production-ready applications. My experience spans research, data science, and software
+        development, and I thrive at the intersection of algorithms, systems,
+        and real-world impact. Explore my {projectsLinkElement} or read my{' '}
+        {blogLinkElement} to get a deeper look at my work, ideas, and engineering
+        approach.
       </p>
     </div>
   );
