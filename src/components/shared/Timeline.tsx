@@ -31,10 +31,10 @@ const Timeline: React.FC<TimelineProps> = ({ entries }) => {
           return (
             <div
               key={milestoneKey}
-              className="relative flex justify-center my-16"
+              className="relative flex justify-center my-10 sm:my-16"
             >
-              <span className="w-full border-t border-gray-300" />
-              <span className="absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/2 inline-flex items-center justify-center px-6 bg-white text-xs uppercase tracking-widest text-gray-500 text-center whitespace-pre-line">
+              <span className="hidden sm:block w-full border-t border-gray-300" />
+              <span className="mt-2 text-xs uppercase tracking-widest text-gray-500 text-center whitespace-pre-line inline-flex items-center justify-center px-2 sm:px-6 bg-transparent sm:bg-white sm:absolute sm:top-0 sm:left-1/2 sm:-translate-x-1/2 sm:translate-y-1/2">
                 {entry.milestoneText}
               </span>
             </div>
