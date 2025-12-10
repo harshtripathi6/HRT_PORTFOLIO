@@ -35,8 +35,9 @@ const Greeting = (): React.ReactElement => {
         <strong>Machine Learning Engineer</strong> and{' '}
         <strong>Master&apos;s student at the University at Buffalo</strong>. I work
         across applied ML, large-scale data science, and full-stack engineering,
-        building production-ready applications. My experience spans research, data science, and software
-        development, and I thrive at the intersection of algorithms, systems,
+        building production-ready applications. My experience spans research,
+        data science, and software development, and I thrive at the
+        intersection of algorithms, systems,
         and real-world impact. Explore my {projectsLinkElement} or read my{' '}
         {blogLinkElement} to get a deeper look at my work, ideas, and engineering
         approach.

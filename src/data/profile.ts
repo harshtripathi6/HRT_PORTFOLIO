@@ -6,7 +6,7 @@ export const profile: Profile = {
   lastName: 'Mehta',
   position: 'AI/ML Engineer | Research Assistant @ UB',
   summary: [
-    'AI/ML Engineer | Research Assistant @ UB (SPECT Imaging) | Ex-Data Scientist @ Walmart & ZS | Full-Stack Developer | Building Intelligent, Scalable Systems',
+    'AI/ML Engineer | Research Assistant @ UB shaping ML-driven system optimization | Ex-Data Scientist @ Walmart & ZS | Full-Stack Developer | Building Intelligent, Scalable Systems',
   ],
   avatar: {
     srcPath: 'profile/avataar_fullxfull.jpeg',
@@ -27,6 +27,10 @@ export const profile: Profile = {
 };
 
 export const timelineEntries: TimelineEntry[] = [
+  {
+    milestoneText:
+      'Graduated from the University at Buffalo — M.S. in Computer Science (May 2026)',
+  },
   {
     companyName: 'University at Buffalo',
     title: 'Research Assistant',
@@ -67,6 +71,9 @@ export const timelineEntries: TimelineEntry[] = [
     image: '/static-assets/logos/lakebrains.jpeg',
   },
   {
+    milestoneText: 'Graduated from NITH — B.Tech in Computer Engineering (Class of 2022)',
+  },
+  {
     companyName: 'National Institute of Technology Hamirpur',
     title: 'Research Assistant — Biometric Signal Analysis',
     duration: 'Aug 2020 - Jun 2022',
@@ -96,5 +103,4 @@ export const timelineEntries: TimelineEntry[] = [
     linkTxt: 'Visit',
     image: '/static-assets/logos/rdc.png',
   },
-
 ];

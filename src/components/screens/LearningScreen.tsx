@@ -16,7 +16,7 @@ const LearningScreen = (props: LearningScreenProps): React.ReactElement => {
   return (
     <PageLayout>
       <SEO
-        title={"Siddharth's Learning Journey"}
+        title="Siddharth's Learning Journey"
         description="This page captures all the certifications, books, and coursework that Siddharth has covered on his learning journey."
       />
       <ErrorBoundary>

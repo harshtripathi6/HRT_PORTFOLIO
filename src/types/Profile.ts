@@ -16,11 +16,12 @@ export type Profile = {
 
 // Timeline Entry Type
 export type TimelineEntry = {
-  companyName: string; // Name of the company or project
-  title: string; // Job title or role
-  duration: string; // Duration of the role (e.g., "Jan 2020 - Dec 2021")
-  description: string; // Description of the work or responsibilities
+  companyName?: string; // Name of the company or project
+  title?: string; // Job title or role
+  duration?: string; // Duration of the role (e.g., "Jan 2020 - Dec 2021")
+  description?: string; // Description of the work or responsibilities
   link?: string; // Optional link to the company or project
-  linkTxt?:string; // optional otherwise will display view more
+  linkTxt?: string; // optional otherwise will display view more
   image?: string; // Optional image URL for the entry
+  milestoneText?: string; // Optional milestone marker text for separators
 };
