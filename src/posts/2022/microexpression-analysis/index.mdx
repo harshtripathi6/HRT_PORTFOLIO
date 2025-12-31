@@ -1,0 +1,72 @@
+---
+title: "Micro-expression Analysis using Heatmap-based Attention Networks"
+
+summary: "Researched micro-expression recognition using heatmap-driven attention and developed a scalable data collection framework for authentic expression capture."
+
+cover: assets/image.png
+
+date: 2022-05-20
+
+tags:
+  - Computer Vision
+---
+
+Micro-expressions are subtle, involuntary facial movements that last a fraction of a second and often reveal true emotional intent. Unlike macro expressions, they are difficult to spot even with careful observation, making automated systems valuable for behavioral analysis, mental state assessment, and human–computer interaction.
+
+During this work, I collaborated with **Dr. Tanmay Verlekar** to investigate **heatmap-based spatial attention mechanisms** that emphasize key facial regions—such as brow furrows, lip corner tension, and cheek micro-movements—while suppressing irrelevant areas. Our research explored how attention maps can guide models toward physiologically meaningful facial cues and improve recognition sensitivity within short temporal windows.
+
+---
+
+## Data Acquisition & Pipeline
+
+A major challenge in micro-expression research is **collecting naturally occurring samples** without coached or exaggerated expressions.  
+To support controlled experimentation, I designed and implemented an **expression capture framework** that:
+
+- extracts high-resolution facial crops from continuous video clips
+- preserves authentic temporal transitions between neutral → onset → apex → offset
+- adapts to **webcams, action cameras, and GoPro footage**
+- enables consistent replay of real-world lighting and pose variation
+
+This pipeline allowed us to curate training material where micro-expressions emerged organically during conversation and stimulus-triggered reactions.
+
+---
+
+## Why This Matters
+
+- Micro-expressions typically span **0.04–0.2 seconds**, making subtle motion cues easily lost without guided spatial focus  
+- Heatmap attention helps **highlight muscle activation**, improving interpretability and reducing noise  
+- A scalable capture pipeline lowers dependency on staged datasets and supports **continued data growth**
+
+---
+
+## Practical Challenges & Insights
+
+- **Low signal strength:** movements are minimal and often confounded by head motion  
+- **Class imbalance:** genuine micro-expressions are rare relative to neutral frames  
+- **Subtle temporal boundaries:** defining expression onset and apex requires precise frame alignment  
+- **Scalability:** multi-device support ensures more diverse and realistic data acquisition
+
+---
+
+## Potential Applications
+
+- Behavioral analysis in high-stakes interviews  
+- Cognitive load and stress monitoring  
+- Assistive technology for autism spectrum communication support  
+- Video-based lie detection research  
+- Human–robot interaction and affective computing  
+
+---
+
+## Collaboration
+
+This project was conducted in association with **Birla Institute of Technology and Science, Pilani — Goa Campus** under guidance from **Dr. Tanmay Verlekar**.
+
+---
+
+## Conclusion
+
+This work demonstrates how **attention-driven spatial focus** and **authentic expression capture** can jointly advance micro-expression analysis.  
+
+By emphasizing physiologically meaningful facial regions and enabling scalable data collection, the framework lays groundwork for future deep learning models capable of recognizing emotional nuance at sub-second timescales.
+

@@ -1,0 +1,85 @@
+---
+title: "Angular Sampling Completeness Index (ASCI) for Self-Collimating SPECT System Design"
+
+summary: "Developed a spatial-resolution dependent angular sampling completeness index to quantify sampling quality, providing a performance modeling metric for Self-Collimating SPECT (SC-SPET) system design."
+
+cover: assets/image.png
+
+date: 2025-01-15
+
+tags:
+  - Medical Imaging
+---
+[Read the abstract in Journal of Nuclear Medicine](https://jnm.snmjournals.org/content/66/supplement_1/251903.abstract)
+
+Self-collimation (SC) in single-photon emission tomography introduces a new imaging paradigm: detector panels arranged in a multi-layer MATRICS configuration allow the front detector layer to simultaneously serve as a collimator for the layer behind it. Unlike traditional mechanical collimation, this architecture breaks the inherent trade-off between spatial resolution and detection sensitivity, opening opportunities for jointly improving both. However, the resulting projection probability density functions (PPDFs) are spatially non-uniform and multiplexed, making existing sampling models—designed for uniform PPDFs—insufficient for SC-SPET evaluation.
+
+To address this gap, we developed an **angular sampling completeness index (ASCI)** that quantifies how well a system samples the image space while explicitly considering spatial-resolution variability. This metric supports SC-SPET system analysis, design iteration, and optimization by linking sampling completeness to achievable image resolution.
+
+---
+
+## Imaging Geometry & System Configuration
+
+Our research studies a **2-D SC-SPET architecture** featuring a hexagonal gantry with six MATRICS detector panels.  
+Each panel contains four detector blocks positioned tangentially, and each block comprises an **8×8 array** of detector elements. Elements are either filled with **GAGG(Ce) scintillators** or intentionally left vacant, creating controlled detection–collimation configurations.
+
+This design produces **non-uniform PPDFs with variable strip width and multiplexing**, requiring a metric that captures sampling density as a function of spatial resolution.
+
+---
+
+## Methodology
+
+We compute PPDFs analytically through ray tracing and evaluate system sampling using **ASCI**, defined as the percentage of angular bins intersected by PPDF strips at a given pixel position over 360°.  
+The process measures how effectively an imaging point is sampled directionally.
+
+We further analyze the relationship between **strip width (FWHM)** and sampling completeness, as strip width serves as a spatial sampling index tied to achievable resolution.
+
+Two operational modes were evaluated:
+
+1) **Stationary gantry**  
+2) **Rotating gantry (24 steps at 2.5° per step)**
+
+For both, we generate ASCI maps under varying PPDF widths and compare reconstruction outcomes using **parallelized expectation-maximization** on a Linux cluster.
+
+---
+
+## Framework Overview
+
+<table>
+  <thead>
+    <tr><th>Component</th><th>Role</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>SC-SPET Geometry</td><td>Defines multi-layer detector configuration and PPDF behavior</td></tr>
+    <tr><td>PPDF Computation</td><td>Ray-tracing model generates spatially varying projection strips</td></tr>
+    <tr><td>Strip Width (FWHM)</td><td>Represents spatial sampling resolution at detector level</td></tr>
+    <tr><td>ASCI Evaluation</td><td>Quantifies angular sampling completeness at each image pixel</td></tr>
+    <tr><td>Operational Modes</td><td>Compares stationary vs rotating gantry sampling capabilities</td></tr>
+    <tr><td>Reconstruction Analysis</td><td>Assesses correlation between ASCI values and image resolution</td></tr>
+  </tbody>
+</table>
+
+---
+
+## Key Findings
+
+- **ASCI magnitude and uniformity increase with gantry rotation**, enhancing sampling completeness and reconstruction quality.
+- **Strip width (FWHM)** influences ASCI distribution and correlates with achieved image resolution.
+- The relationship between ASCI and reconstruction demonstrates **predictive utility for system performance modeling**.
+- Combined, **ASCI + PPDF width** provide complementary metrics for **evaluating and optimizing SC-SPET designs**.
+
+---
+
+## Practical Implications
+
+- Enables **sampling-aware system design**, guiding detector placement and rotation strategies.
+- Supports **data-efficient evaluation**, reducing simulation and prototyping overhead.
+- Offers a **unified metric** bridging geometry, resolution behavior, and reconstruction outcomes.
+
+---
+
+## Conclusion
+
+This work introduces ASCI as a **resolution-dependent sampling completeness metric** for SC-SPET systems.  
+By integrating spatial sampling characteristics with angular coverage assessment, ASCI enables quantitative comparisons across design configurations and operational modes. When analyzed alongside PPDF strip width, ASCI provides a principled way to predict reconstruction quality and guide SC-SPET optimization.
+

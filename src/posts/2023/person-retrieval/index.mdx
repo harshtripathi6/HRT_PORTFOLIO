@@ -1,0 +1,137 @@
+---
+title: "Person Retrieval using Soft Biometrics"
+
+summary: "I worked on developing a framework that can be used to seamlessly transform Discrete Annotations(DA) into Natural Language Description(NLD) ones. This framework is scalable, robust and adaptable to different writin structures"
+
+cover: assets/image.png
+
+date: 2023-10-11
+
+tags:
+  - NLP
+---
+
+---
+[Read the full paper on IEEE Xplore](https://ieeexplore.ieee.org/document/10333563)
+## Research Motivation
+
+Person retrieval systems must interpret **human descriptions of appearance**—such as clothing, build, or accessories—to identify individuals in surveillance footage. However, real-world datasets differ drastically: some provide **natural language descriptions (NLD)** while others contain **fixed discrete annotations (DA)**. This inconsistency limits scalability and prevents models from learning jointly from complementary sources.
+
+Our research addresses this gap by designing a **dataset-merging framework** that transforms NLDs into DA-style, numerically encoded attributes, enabling unified training across datasets with different annotation styles.  
+This work supports soft-biometric person retrieval where **faces are unavailable** and **visual identity must be inferred from descriptive traits**.
+
+
+---
+
+## Core Contribution
+
+We propose a **hybrid dataset integration pipeline** that:
+
+1. **Extracts adjective–noun attribute pairs** from natural language queries using rule-based + customized NLP parsing.
+2. **Maps descriptive expressions to target soft-biometric attributes** (e.g., *"dark hair"* → *hair_color: dark*).
+3. **Encodes attribute values numerically** following the AVSS schema used in surveillance datasets.
+4. **Constructs a mapping matrix per description**, allowing retrieval models to index which soft-biometric traits appear in each query.
+5. **Generates a unified, tabular representation** enabling joint training across datasets with different annotation formats.
+
+This approach enables **NLD → DA conversion** while preserving descriptive nuance, giving retrieval systems access to richer language-driven variation without sacrificing structured consistency.
+
+---
+
+## Framework Overview
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>NLD Parsing</strong></td>
+      <td>Extracts appearance traits from natural language descriptions</td>
+    </tr>
+    <tr>
+      <td><strong>Synonym Dictionaries (DSC)</strong></td>
+      <td>Normalizes vocabulary and merges equivalent expressions</td>
+    </tr>
+    <tr>
+      <td><strong>Value Encoding Dictionaries (DA)</strong></td>
+      <td>Assigns numeric values to descriptive attribute levels</td>
+    </tr>
+    <tr>
+      <td><strong>Mapping Matrix (MM)</strong></td>
+      <td>Tracks presence of each attribute across descriptions</td>
+    </tr>
+    <tr>
+      <td><strong>Dataframe Generation</strong></td>
+      <td>Produces structured output for training and evaluation</td>
+    </tr>
+  </tbody>
+</table>
+
+> <em>Example:</em> “a very slim tall man wearing blue shorts and yellow shoes”  
+→ height: <em>tall</em> (3), build: <em>very slim</em> (0), skin: <em>unknown</em> (-1), torso_color: <em>unknown</em> (-1), leg_color: <em>blue</em>, footwear_color: <em>yellow</em>
+
+---
+
+## Why This Matters
+
+Merging datasets improves **retrieval coverage, reduces bias, and enhances generalization**, but prior work lacked a programmatic solution for unifying different annotation styles.  
+Our framework enables:
+
+- **Scalable dataset growth** without manual relabeling
+- **Attribute-aware person retrieval** even with vague or noisy language
+- **Interoperability between NLD- and DA-style datasets**
+- **Training signals that reflect how humans naturally describe people**
+
+---
+
+## Practical Challenges & Solutions
+
+<table>
+  <thead>
+    <tr>
+      <th>Challenge</th>
+      <th>Solution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coordinated adjectives (<em>“black and white shirt”</em>)</td>
+      <td>Preprocessing normalizes phrasing to extract both attributes (<em>black shirt</em>, <em>white shirt</em>)</td>
+    </tr>
+    <tr>
+      <td>Vocabulary drift &amp; synonyms</td>
+      <td>Expandable synonym dictionaries allow iterative refinement and controlled normalization</td>
+    </tr>
+    <tr>
+      <td>Missing attribute values</td>
+      <td>Attribute presence encoded as <code>-1</code> to denote <em>unknown</em> while maintaining schema consistency</td>
+    </tr>
+    <tr>
+      <td>Noisy or ambiguous language</td>
+      <td>Filtering, part-of-speech checks, and secondary extraction passes improve robustness</td>
+    </tr>
+    <tr>
+      <td>Scaling to additional attributes</td>
+      <td>Dictionary-based extensibility supports new features without restructuring the pipeline</td>
+    </tr>
+  </tbody>
+</table>
+
+
+---
+
+## Key Takeaways
+
+- **First modular framework** to merge datasets with contrasting annotation styles for person retrieval.
+- **Transforms unstructured descriptions into model-ready structured attributes.**
+- **Reduces reliance on manual dataset construction** while expanding applicability of soft-biometrics retrieval systems.
+
+
+---
+
+## Acknowledgment
+
+Funded by the **Gujarat Council of Science and Technology (GUJCOST)** under STI Policy research grant GUJCOST/STI/2021-22/3858. Research completed in collaboration with **Ahmedabad University**, **BITS Pilani**, **RyDOT Infotech**, and **Pandit Deendayal Energy University**.

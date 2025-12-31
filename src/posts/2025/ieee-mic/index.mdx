@@ -1,0 +1,90 @@
+---
+title: "Projection Angular Sampling Completeness & Probability Density Sensitivity in Self-Collimation SPECT"
+
+summary: "Investigated Angular Sampling Completeness (ASCI) and PPDF-based sensitivity as system design metrics for Self-Collimation SPECT, demonstrating their relationship to spatial resolution and reconstruction performance."
+
+cover: assets/image.png
+
+date: 2025-10-15
+
+tags:
+  - Medical Imaging
+---
+
+Self-collimation (SC) is an emerging SPECT architecture in which multi-layer detector arrays serve as both **detectors and intrinsic collimators**, bypassing the traditional trade-off between spatial resolution and sensitivity imposed by mechanical collimation. This work evaluates **Angular Sampling Completeness (ASCI)** and **Projection Probability Density Function (PPDF) sensitivity** as quantitative metrics that characterize the sampling capability and performance of SC-SPECT system designs.
+
+Unlike conventional SPECT, SC configurations generate **spatially varying and multiplexed PPDFs**, meaning classical sampling or resolution models are insufficient. By analyzing sampling completeness and PPDF-based sensitivity across system configurations, we connect detector layout and operation mode to imaging performance.
+
+---
+
+## System Overview
+
+We evaluate SC-SPECT systems constructed from **hexagonal MATRICS detector arrangements**, where each panel contains multiple scintillator-filled detector layers.  
+This architecture naturally introduces **multiple projection paths per voxel**, enabling improved sampling density without mechanical collimators.
+
+PPDFs are computed analytically via ray tracing, reflecting realistic spatial resolution characteristics of each detector element.  
+From these PPDFs, we derive **ASCI maps** to quantify angular coverage at each location in the image space and **PPDF-based sensitivity maps** to assess detector efficiency.
+
+---
+
+## Methods
+
+Our evaluation framework compares **three geometrical SC-SPECT configurations**, each differing in detector aperture shape and element spacing.  
+For each configuration, we compute:
+
+- **Projection Probability Density Functions (PPDFs)** to model spatial response profiles across the image space  
+- **PPDF-derived strip widths (FWHM)** to characterize spatial-resolution behavior
+- **Angular Sampling Completeness Index (ASCI)** to measure directional sampling coverage per pixel
+- **PPDF Sensitivity** to quantify photon detection likelihood
+- **Reconstructed images** from a compressed practical phantom
+
+ASCI and PPDF metrics are assessed under both **stationary** and **rotating gantry** operation schemes to study the effect of acquisition motion on sampling quality and reconstruction performance.
+
+---
+
+## Framework Overview
+
+<table>
+  <thead>
+    <tr><th>Metric</th><th>Role</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>PPDF</td><td>Models projected response distribution; reflects intrinsic resolution</td></tr>
+    <tr><td>PPDF-FWHM</td><td>Characterizes spatial sampling width per detector element</td></tr>
+    <tr><td>ASCI</td><td>Quantifies angular sampling completeness for each pixel</td></tr>
+    <tr><td>PPDF Sensitivity</td><td>Indicates photon collection efficiency across the field of view</td></tr>
+    <tr><td>Reconstruction</td><td>Connects sampling characteristics to practical imaging outcomes</td></tr>
+  </tbody>
+</table>
+
+---
+
+## Key Findings
+
+- **Rotational SC-SPECT designs** produce **higher and more uniform ASCI values** than stationary configurations  
+- Increased ASCI correlates with **improved reconstruction resolution and artifact suppression**
+- **PPDF-FWHM values** modulate effective sampling density and influence regions of weak resolution
+- **PPDF sensitivity maps** provide complementary insight into photon detection efficiency and should be considered jointly with ASCI
+- Combined, **ASCI and PPDF-FWHM** offer a principled basis for **predicting SC-SPECT performance prior to full reconstruction**
+
+---
+
+## Practical Insights
+
+- Sampling completeness and resolution characteristics **depend on detector shape, aperture configuration, and acquisition motion**
+- **Multiplexing effects** inherent to SC designs can be leveraged when evaluated with sampling-aware metrics
+- ASCI and PPDF-based sensitivity **enable data-efficient design iteration** without exhaustive simulation
+
+---
+
+## Conclusion
+
+ASCI and PPDF-based metrics demonstrate strong potential as **quantitative tools for characterizing and optimizing Self-Collimation SPECT designs**.  
+By linking angular sampling quality and spatial resolution behavior to reconstructed imaging outcomes, these metrics support informed SC-SPECT system development and predictive design assessment.
+
+---
+
+## Acknowledgements
+
+This research is supported by the **National Institutes of Biomedical Imaging and Bioengineering (NIBIB)** and the **National Institute of Health** under Grant R21EB032293. Computational work utilized the **UB high-performance computing platform**.
+

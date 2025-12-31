@@ -2,46 +2,25 @@ import { Book, Certificate, Coursework } from '../types/Learnings';
 
 export const certificationsData: Certificate[] = [
   {
-    title: 'Computer Vision Basics',
+    title: 'Machine Learning Associate',
+    platform: 'Amazon Web Services(AWS)',
+    date: 'Jul 2025',
+    link: 'https://www.credly.com/badges/1d58821d-291b-47b3-8ef8-9d6974ba6c47/linked_in_profile',
+    icon: '/static-assets/logos/aws.png',
+  },
+  {
+    title: 'Data Scientist\'s Toolbox',
     platform: 'Coursera',
-    date: 'Aug 2021',
-    link: 'https://www.coursera.org/account/accomplishments/certificate/QHUSYRBJMQX4',
+    date: 'Apr 2020',
+    link: 'https://coursera.org/share/84b34391ba7f51d98368a70022ba75c8',
     icon: 'https://coursera.org/favicon.ico',
   },
   {
-    title: 'Javascript Algorithms & Data Structures',
-    platform: 'freeCodeCamp',
-    date: 'May 2021',
-    link: 'https://www.freecodecamp.org/certification/siddharthm10/javascript-algorithms-and-data-structures',
-    icon: 'https://freecodecamp.org/favicon-32x32.png?v=6cba562cbd10e31af925a976f3db73f7',
-  },
-  {
-    title: 'Algorithmic Toolbox',
+    title: 'R Programming',
     platform: 'Coursera',
-    date: 'Oct 2020',
-    link: 'https://www.coursera.org/account/accomplishments/verify/DGLRM9M85D6B',
+    date: 'Apr 2020',
+    link: 'https://www.coursera.org/account/accomplishments/verify/8UXWEUWKA8RN?utm_source=link&utm_campaign=copybutton_certificate',
     icon: 'https://coursera.org/favicon.ico',
-  },
-  {
-    title: 'Convolutional Neural Network',
-    platform: 'Coursera',
-    date: 'Oct 2020',
-    link: 'https://www.coursera.org/account/accomplishments/verify/XP8PG7NN8N34',
-    icon: 'https://coursera.org/favicon.ico',
-  },
-  {
-    title: 'Python Programming',
-    platform: 'Udemy',
-    date: 'Oct 2022',
-    link: 'https://www.udemy.com/certificate/UC-01414403-6486-43d1-8d7a-7e671d38fa6a/',
-    icon: 'https://cdn.iconscout.com/icon/free/png-256/free-udemy-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-7-pack-logos-icons-2945277.png?f=webp',
-  },
-  {
-    title: 'C++ Programming',
-    platform: 'Udemy',
-    date: 'Jun 2022',
-    link: 'https://www.udemy.com/certificate/UC-6b2b55d3-1b4b-42de-8579-264796d9bf2c/',
-    icon: 'https://cdn.iconscout.com/icon/free/png-256/free-udemy-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-7-pack-logos-icons-2945277.png?f=webp',
   },
 ];
 

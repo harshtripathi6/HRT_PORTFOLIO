@@ -45,11 +45,11 @@ const BlogScreen = (props: BlogScreenProps): React.ReactElement => {
   return (
     <PageLayout>
       <SEO
-        title="Blog"
-        description="Articles about life, web-development and machine-learning"
+        title="Research"
+        description="Research projects, notes, and ongoing explorations"
       />
       <Row>
-        <PageHeader>Blog</PageHeader>
+        <PageHeader>Research</PageHeader>
         <Badge className="ml-3 self-start">{postsNum}</Badge>
       </Row>
       {/* Tags Section */}
@@ -59,7 +59,7 @@ const BlogScreen = (props: BlogScreenProps): React.ReactElement => {
           kind={!selectedTag ? 'primary' : 'secondary'}
           onClick={():void => setSelectedTag(null)}
         >
-          All
+          All Projects
         </Button>
         {uniqueTags.map((tag) => (
           <Button

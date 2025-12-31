@@ -18,7 +18,7 @@ export const routes: Routes = {
   },
   blog: {
     path: '/blog',
-    name: 'Blog',
+    name: 'Research',
   },
   learning: {
     path: '/learning',

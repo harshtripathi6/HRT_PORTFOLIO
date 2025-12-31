@@ -1,25 +1,24 @@
 import { Projects } from '../types/Project';
 
 export const projects: Projects = {
-  'micrograd-cpp': {
-    id: 'micrograd-cpp',
-    name: '🤖 Micrograd Cpp',
-    srcURL: { url: 'https://github.com/siddharthm10/micrograd-cpp' },
+  'CAFA Protein Prediction': {
+    id: 'cafa-protein-prediction',
+    name: 'CAFA 6 Protein Prediction',
+    srcURL: { url: 'https://github.com/harshtripathi6/cafa6' },
     demoURL: undefined,
-    cover: { srcPath: 'projects/micrograd-ts/04-cover.png' },
-    startDate: '2025-01-20',
+    cover: { srcPath: 'projects/micrograd-ts/image.png' },
+    startDate: '2025-12-20',
     summary: [
-      'A tiny scalar-valued autograd engine and a neural net on top of it. A C++ version of the karpathy/micrograd repo.',
+      'Implemented a protein function prediction model using deep learning techniques. Used ESM2 model as backbone and finetuned it on CAFA 6 dataset.',
     ],
     tags: [
       { name: 'AI' },
-      { name: 'ML' },
       { name: 'Machine Learning' },
-      { name: 'C++' },
+      { name: 'Computational Biology' }
     ],
     gitHubRepo: {
-      owner: 'siddharthm10',
-      repo: 'micrograd-cpp',
+      owner: 'harshtripathi6',
+      repo: 'cafa6',
     },
     achievements: [],
     highlight: true,

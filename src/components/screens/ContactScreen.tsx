@@ -39,8 +39,8 @@ const ContactScreen = (): React.ReactElement => {
   return (
     <PageLayout>
       <SEO
-        title="Contact Siddharth"
-        description="This page contains contact information to reach out Siddharth via various platforms."
+        title="Contact Harsh"
+        description="This page contains contact information to reach out Harsh via various platforms."
       />
       <ErrorBoundary>
         <div className="min-h-screen flex flex-col items-center justify-center px-6">
@@ -70,19 +70,19 @@ const ContactScreen = (): React.ReactElement => {
               {renderContactLink(
                 <FaEnvelope className="text-2xl" />,
                 'Email',
-                'mailto:siddharth.mehtaid@gmail.com',
+                'mailto:htripathi6@gmail.com',
               )}
               {renderContactLink(
                 <FaPhoneAlt className="text-2xl" />,
                 'Phone',
-                'tel:+1-(716)-348-4898',
+                'tel:+1-(740)-409-3232',
               )}
             </div>
 
             {/* Book a Call */}
             <div className="text-center mb-4">
               <a
-                href="https://app.simplymeet.me/siddharthm10/siddharthm10-20-1737313940965?day=2025-01-19"
+                href="https://app.simplymeet.me/htripathi6/htripathi6-30-1767206900564?day=2025-12-31#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-md hover:bg-black transition"
@@ -99,7 +99,7 @@ const ContactScreen = (): React.ReactElement => {
             </h2>
             <div className="w-full h-[500px] sm:h-[700px]">
               <iframe
-                src="/static-assets/Resume - Siddharth Mehta.pdf"
+                src="/static-assets/HRT_ML_Resume.pdf"
                 title="Resume"
                 className="w-full h-full border-none"
               />
