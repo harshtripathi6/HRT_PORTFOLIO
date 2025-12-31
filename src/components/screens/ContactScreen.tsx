@@ -110,7 +110,7 @@ const ContactScreen = (): React.ReactElement => {
             </div>
             <div className="text-center my-4">
               <a
-                href="/static-assets/resume_ml.pdf"
+                href="/static-assets/HRT_ML_Resume.pdf"
                 download
                 className="inline-block px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-md hover:bg-black transition"
               >
