@@ -1,9 +1,9 @@
 {
-  "name": "siddharthm10.github.io",
+  "name": "harsh-tripathi-portfolio",
   "version": "1.0.0",
   "private": false,
-  "author": "Siddharth Mehta",
-  "homepage": "https://siddharthmehta.in",
+  "author": "Harsh Tripathi",
+  "homepage": "https://harsh-tripathi.vercel.app",
   "license": "0BSD",
   "scripts": {
     "fetch-stars": "node ./src/scripts/fetchGitHubStars.js",
