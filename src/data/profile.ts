@@ -72,7 +72,7 @@ export const timelineEntries: TimelineEntry[] = [
     image: '/static-assets/logos/au.png',
   },
   {
-    milestoneText: 'Graduated from NITH — B.Tech in Computer Engineering (Class of 2022)',
+    milestoneText: 'Graduated from BITS PILANI - Double Major MS Mathematics and BE Electrical Engineering (Class of 2022)',
   },
   {
     companyName: 'Birla Institute of Technology and Science, Pilani',
